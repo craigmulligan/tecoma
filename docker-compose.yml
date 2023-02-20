@@ -12,16 +12,18 @@ services:
   #     - DISPLAY_HEIGHT=1024
   #     - RUN_XTERM=no
 
-  tailscale:
-    build:
-      context: ./tailscale 
-      dockerfile: Dockerfile.template
-    restart: always
-    network_mode: host
-    volumes:
-      - tailscale-state:/tailscale
+  # tailscale:
+  #   build:
+  #     context: ./tailscale 
+  #     dockerfile: Dockerfile.template
+  #   restart: always
+  #   network_mode: host
+  #   volumes:
+  #     - tailscale-state:/tailscale
 
   caddy:
+    ports:
+      - "80:8080"
     build:
       context: ./caddy
       dockerfile: Dockerfile.template
