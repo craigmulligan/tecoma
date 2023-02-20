@@ -43,6 +43,7 @@ tailscale up \
 	--authkey "${TAILSCALE_KEY}" \
 	--hostname "${TAILSCALE_HOSTNAME}" \
 	--advertise-tags "${TAILSCALE_TAGS}" \
+  --advertise-routes "${TAILSCALE_ADVERTISE_ROUTES}" \
 	$@
 
 if [ "${TAILSCALE_IP}" = true ]; then
