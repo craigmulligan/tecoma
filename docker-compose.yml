@@ -21,5 +21,11 @@ services:
     volumes:
       - tailscale-state:/tailscale
 
+  caddy:
+    build:
+      context: ./caddy
+      dockerfile: Dockerfile.template
+    restart: always
+
 volumes:
   tailscale-state: {}
