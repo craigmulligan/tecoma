@@ -11,3 +11,15 @@ services:
       - DISPLAY_WIDTH=1280
       - DISPLAY_HEIGHT=1024
       - RUN_XTERM=no
+
+  tailscale:
+    build:
+      context: ./tailscale 
+      dockerfile: Dockerfile.template
+    restart: always
+    network_mode: host
+    volumes:
+      - tailscale-state:/tailscale
+
+volumes:
+  tailscale-state: {}
