@@ -1,16 +1,16 @@
 version: '2'
 services:
-  browser:
-    build: ./browser
-    privileged: true # required for UDEV to find plugged in peripherals such as a USB mouse
-    # network_mode: host
-    ports:
-        - "80:8080"
-    environment:
-      # Adjust to your screen size
-      - DISPLAY_WIDTH=1280
-      - DISPLAY_HEIGHT=1024
-      - RUN_XTERM=no
+  # browser:
+  #   build: ./browser
+  #   privileged: true # required for UDEV to find plugged in peripherals such as a USB mouse
+  #   # network_mode: host
+  #   ports:
+  #       - "80:8080"
+  #   environment:
+  #     # Adjust to your screen size
+  #     - DISPLAY_WIDTH=1280
+  #     - DISPLAY_HEIGHT=1024
+  #     - RUN_XTERM=no
 
   tailscale:
     build:
