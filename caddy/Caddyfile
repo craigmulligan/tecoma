@@ -1,10 +1,6 @@
 :8080
 
-respond /ping "All good in the hood" 200 
-
 reverse_proxy {
-  to 192.168.1.1:80
-  header_up Host {http.reverse_proxy.upstream.host}
-  header_up X-Real-IP {remote}
-  header_up X-Forwarded-Proto {scheme}
+    to 192.168.1.1:80
+    header_up Host {http.reverse_proxy.upstream.host}
 }
