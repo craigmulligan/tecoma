@@ -1,5 +1,6 @@
 :8080
 
+log
 respond / "All good in the hood" 200 
 
 handle_path /router {
@@ -9,5 +10,11 @@ handle_path /router {
     header_up Host {http.reverse_proxy.upstream.host}
     header_up X-Real-IP {remote}
     header_up X-Forwarded-Proto {scheme}
+  }
+}
+
+handle_path /* {
+  reverse_proxy {
+    to 192.168.1.1
   }
 }

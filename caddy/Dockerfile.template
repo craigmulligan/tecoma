@@ -4,5 +4,7 @@ FROM balenalib/$BALENA_MACHINE_NAME_ARG-alpine:run
 
 RUN apk add caddy 
 
+COPY Caddyfile Caddyfile 
+
 EXPOSE 8080
 CMD ["caddy", "run"]
