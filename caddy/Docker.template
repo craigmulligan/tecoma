@@ -1,0 +1,10 @@
+ARG BALENA_MACHINE_NAME_ARG=%%BALENA_MACHINE_NAME%%
+
+FROM balenalib/$BALENA_MACHINE_NAME_ARG-alpine:run
+
+RUN apk add caddy 
+
+COPY init.sh /init.sh
+RUN chmod +x /init.sh
+
+ENTRYPOINT ["/init.sh"]
