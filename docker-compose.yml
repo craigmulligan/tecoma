@@ -34,7 +34,7 @@ services:
       - "8080:8080"
     build:
       context: ./moma
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.template
     restart: always
 
 # volumes:
