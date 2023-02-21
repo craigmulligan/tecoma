@@ -31,11 +31,11 @@ services:
 
   moma:
     ports:
-      - 8080
+      - "8080:8080"
     build:
       context: ./moma
       dockerfile: Dockerfile
     restart: always
 
-volumes:
-  tailscale-state: {}
+# volumes:
+#   tailscale-state: {}
