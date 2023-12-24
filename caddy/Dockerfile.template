@@ -7,4 +7,4 @@ RUN apk add caddy
 COPY Caddyfile Caddyfile 
 
 EXPOSE 8080
-CMD ["caddy", "run"]
+CMD ["./start.sh"]

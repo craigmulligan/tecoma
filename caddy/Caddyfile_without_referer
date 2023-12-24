@@ -2,5 +2,4 @@
 
 reverse_proxy {
   to {$TARGET_IP}
-  header_up Referer "http://{$TARGET_IP}"
 }
