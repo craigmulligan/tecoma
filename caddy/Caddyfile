@@ -1,6 +1,6 @@
 :8080
 
 reverse_proxy {
-  to {TARGET_IP}
+  to {$TARGET_IP}
   header_up Referer {http://{$REFERER_IP}:http.request.header.Referer}
 }
