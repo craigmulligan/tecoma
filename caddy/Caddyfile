@@ -3,5 +3,5 @@
 reverse_proxy {
 	to {$TARGET_IP}
 	# Refer is needed otherwise we get a auth error.
-	header_up Referer "http://{$TARGET_IP}"
+	header_up Referer "http://{$REFERER_IP}"
 }
